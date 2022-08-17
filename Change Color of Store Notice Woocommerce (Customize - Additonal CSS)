@@ -1,0 +1,7 @@
+p.woocommerce-store-notice.demo_store {
+    background-color: black;
+    color:white;
+}
+a.woocommerce-store-notice__dismiss-link {
+    color:green !important;
+}
