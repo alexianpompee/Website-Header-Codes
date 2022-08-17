@@ -1,0 +1,55 @@
+<script>
+jQuery(document).ready(function(){
+    var setState = "close";
+    if(setState == "open"){
+        jQuery(".pa-accordion .et_pb_toggle").removeClass("et_pb_toggle_close");
+        jQuery(".pa-accordion .et_pb_toggle").addClass("et_pb_toggle_open");
+        jQuery(".et_pb_toggle_open .et_pb_toggle_content").css("display", "block");
+        jQuery(".et_pb_toggle_open .et_pb_toggle_title").addClass("all_on");
+        jQuery(".all_on").on("click", function(){
+            
+            
+            if(jQuery(this).parent().hasClass("et_pb_toggle_open")){
+                jQuery(this).parent().removeClass("et_pb_toggle_open");
+                jQuery(this).parent().removeClass("et_pb_toggle_close");
+                jQuery(this).parent().css("padding", "20px");
+                jQuery(this).parent().siblings().removeClass("et_pb_toggle_close");
+                jQuery(this).parent().siblings().removeClass("et_pb_toggle_open");
+                jQuery(this).parent().siblings().css("padding", "20px");
+              	
+            }
+          jQuery(this).removeClass("all_on");
+        
+            
+        })
+        
+    }else{
+        jQuery(".pa-accordion .et_pb_toggle").removeClass("et_pb_toggle_open");
+        jQuery(".pa-accordion .et_pb_toggle").addClass("et_pb_toggle_close");
+        jQuery(".et_pb_toggle_close .et_pb_toggle_content").css("display", "none");
+    }
+})
+</script>
+
+<!-- Accordion First Item Close End -->
+
+<script >
+    jQuery(function($) {
+        $(document).ready(function() {
+            $("body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu  li.page_item_has_children").append('<a href="#" class="mobile-toggle"></a>');
+            $('ul.et_mobile_menu li.menu-item-has-children .mobile-toggle, ul.et_mobile_menu li.page_item_has_children .mobile-toggle').click(function(event) {
+                event.preventDefault();
+                $(this).parent('li').toggleClass('dt-open');
+                $(this).parent('li').find('ul.children').first().toggleClass('visible');
+                $(this).parent('li').find('ul.sub-menu').first().toggleClass('visible');
+            });
+            iconFINAL = 'P';
+            $('body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu li.page_item_has_children').attr('data-icon', iconFINAL);
+            $('.mobile-toggle').on('mouseover', function() {
+                $(this).parent().addClass('is-hover');
+            }).on('mouseout', function() {
+                $(this).parent().removeClass('is-hover');
+            })
+        });
+    }); 
+</script>
