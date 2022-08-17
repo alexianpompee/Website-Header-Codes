@@ -1,0 +1,7 @@
+.mobile_menu_bar:before {
+color: #ffffff !important;
+}
+
+a {
+     color: #000000;
+}
