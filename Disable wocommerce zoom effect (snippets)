@@ -1,0 +1,9 @@
+/**
+ * Disable WooCommerce zoom effect on the product image
+ * @author Abdelfatah Aboelghit
+ * @version 1.0
+ */
+add_action( 'wp', 'divikingdom_disable_wc_zoom', 99 );
+function divikingdom_disable_wc_zoom() {
+	remove_theme_support( 'wc-product-gallery-zoom' );
+}
