@@ -1,0 +1,11 @@
+/* Increase width of drop-down menus */
+@media screen and (min-width: 981px) {
+.sub-menu {
+	min-width: 300px;
+}
+#top-menu li li a {
+    width: 260px;
+	/* Extra - Reduce padding on list items */
+	padding: 4px 12px;
+	}
+}
